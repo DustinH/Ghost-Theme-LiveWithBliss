@@ -1,0 +1,18 @@
+<div class="navbar-header">
+    {{#if @blog.logo}}
+        <a class="blog-logo navbar-brand home" href="{{@blog.url}}">
+            <img src="{{@blog.logo}}" alt="{{@blog.title}}" class="hidden-xs hidden-sm" />
+            <img src="/img/logo-small.png" alt="LiveWithBliss Real Estate Dallas TX Logo" class="visible-xs visible-sm"><span class="sr-only">LiveWithBliss - go to homepage</span>
+        </a>
+    {{/if}}
+    {{#if @blog.navigation}}
+        <a class="menu-button icon-menu navbar-brand home" href="#"><span class="word">Menu</span></a>
+    {{/if}}
+
+    <div class="navbar-buttons">
+        <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-align-justify"></i>
+        </button>
+    </div>
+</div>

@@ -44,21 +44,34 @@
 </head>
 <body class="{{body_class}} nav-closed">
 
-    {{!-- The blog navigation links --}}
-    {{navigation}}
+    <div id="all">
 
-    <div class="site-wrapper">
+        <header>
+            {{!-- The blog gray bar --}}
+            {{> topbar}}
+
+            <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+                <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+                    <div class="container">
+                        {{> navigationheader}}
+
+                        {{navigation}}
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="content">
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
-        {{!-- The tiny footer at the very bottom --}}
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
+        {{> footer}}
+
+        </div>
 
     </div>
+
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -68,6 +81,14 @@
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="{{asset "js/jquery.cookie.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/waypoints.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.counterup.min.js"}}" ></script>
+    <script type="text/javascript" src="{{asset "js/jquery.parallax-1.1.3.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/front.js"}}"></script>
 
 </body>
 </html>

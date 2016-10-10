@@ -1,0 +1,39 @@
+{
+    "name": "livewithbliss",
+    // "displayName": "Live With Bliss - 0.10.0",
+    "description": "Live with Bliss theme from the default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
+    "homepage": "https://github.com/DustinH/Ghost-Thme-LiveWithBliss",
+    // "demo": "",
+    "version": "1.0.1",
+    "engines": {
+        "ghost": "^0.9.0"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {
+        "name": "Practability",
+        "email": "dustin@practability.com",
+        "url": "http://practability.com"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Personal Blogs",
+            "Real Estate Blog"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/DustinH/Ghost-Thme-LiveWithBliss.git"
+    },
+    "bugs": "https://github.com/DustinH/Ghost-Thme-LiveWithBliss/issues",
+    "contributors": "https://github.com/DustinH/Ghost-Thme-LiveWithBliss/graphs/contributors"
+}

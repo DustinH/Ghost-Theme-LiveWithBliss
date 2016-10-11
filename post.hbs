@@ -15,6 +15,12 @@
     </nav>
 </header>-->
 
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-9" id="blog-post">
+
+
 <main class="content container" role="main">
     <article class="{{post_class}}">
 
@@ -83,36 +89,10 @@
             {{/if}}
 
         </footer>
-
     </article>
 </main>
 
-<aside class="related-posts">
-    <h4 class="text-uppercase">Related Posts</h4>
 
-    {{#get "posts" limit="4" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags"}}
-    {{#foreach posts}}
-
-        <div class="row post-related">
-            <div class="col-sm-3 col-md-2 text-center-xs">
-                <p>
-                    <img src="{{asset "img/texture-turquoise.png"}}" class="img-responsive img-circle" alt="{{title}}">
-                </p>
-                <p class="hidden">{{image}}</p>
-            </div>
-            <div class="col-sm-9 col-md-10">
-                <h5 class="text-uppercase"><a href="{{url}}">{{title}}</a></h5>
-                <!--<p class="posted"><i class="fa fa-clock-o"></i> {{published_at}}</p>-->
-                <p>{{excerpt characters="140"}}</p>
-            </div>
-        </div>
-
-    {{/foreach}}
-    {{/get}}
-
-
-
-</aside>
 
 {{!-- Links to Previous/Next posts --}}
 <aside class="read-next">
@@ -133,5 +113,15 @@
     </a>
     {{/prev_post}}
 </aside>
+
+        </div>
+
+        <div class="col-md-3">
+            {{> sidebar}}
+        </div>
+
+    </div>
+</div>
+
 
 {{/post}}

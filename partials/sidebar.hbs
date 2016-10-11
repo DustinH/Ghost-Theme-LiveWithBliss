@@ -18,22 +18,22 @@
 
                 <aside class="blog-sidebar">
                     {{#is "post, page"}}
-                        {{#get "posts" filter="featured:true+id:-{{post.id}}" limit="3" }}
-                            {{> "sidebar-posts" sidebarTitle="Featured" sidebarPosts=posts}}
+                        {{#get "posts" filter="featured:true+id:-{{id}}" limit="3" as |featuredpostpage| }}
+                            {{> "sidebar-posts" sidebarTitle="Featured" sidebarPosts=featuredpostpage}}
                         {{/get}}
                     {{else}}
-                        {{#get "posts" filter="featured:true+id:-[{{posts[*].id}}]" limit="3" }}
-                            {{> "sidebar-posts" sidebarTitle="Featured" sidebarPosts=posts}}
+                        {{#get "posts" filter="featured:true+id:-[{{posts[*].id}}]" limit="3" as |featured| }}
+                            {{> "sidebar-posts" sidebarTitle="Featured" sidebarPosts=featured}}
                         {{/get}}
                     {{/is}}
 
                     {{#is "post, page"}}
-                        {{#get "posts" filter="featured:false+id:-{{post.id}}" limit="3" }}
-                            {{> "sidebar-posts" sidebarTitle="Recent" sidebarPosts=posts}}
+                        {{#get "posts" filter="id:-{{id}}" limit="3" as |recentpostpage| }}
+                            {{> "sidebar-posts" sidebarTitle="Recent" sidebarPosts=recentpostpage}}
                         {{/get}}
                     {{else}}
-                        {{#get "posts" filter="featured:false+id:-[{{posts[*].id}}]" limit="3" }}
-                            {{> "sidebar-posts" sidebarTitle="Recent" sidebarPosts=posts}}
+                        {{#get "posts" limit="3" as |recentposts| }}
+                            {{> "sidebar-posts" sidebarTitle="Recent" sidebarPosts=recentposts}}
                         {{/get}}
                     {{/is}}
 

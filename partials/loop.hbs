@@ -34,12 +34,12 @@
                 <p class="author-category">By <a href="{{author.url}}">{{author.name}}</a>
                 </p>
                 <p class="date-comments">
-                    <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}"><a href="{{url}}><i class="fa fa-calendar-o"></i> {{date format="DD MMMM YYYY"}}</a></time>
+                    <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}"><a href="{{url}}"><i class="fa fa-calendar-o"></i> {{date format="DD MMMM YYYY"}}</a></time>
                     <!--<a href="blog-post.html"><i class="fa fa-comment-o"></i> 8 Comments</a>-->
                 </p>
             </div>
             <p class="intro">{{excerpt words="26"}}</p>
-            <p class="read-more"><a href="{{url}} class="btn btn-template-main">Continue reading</a></p>
+            <p class="read-more"><a href="{{url}}" class="btn btn-template-main">Continue reading</a></p>
             <footer class="post-meta">
                 {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
                 {{author}}

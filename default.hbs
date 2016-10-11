@@ -113,9 +113,44 @@
 
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+    <script>
+        if (typeof jQuery == 'undefined') {
+            //document.write(unescape("%3Cscript src='/js/jquery-3.1.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+            document.write(unescape("%3Cscript src='{{asset "js/jquery-3.1.1.min.js"}}' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    <!--<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>-->
+    <script type="text/javascript" src="{{asset "js/jquery-migrate-3.0.0.min.js"}}"></script>
+
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+
+    <script type="text/javascript">
+
+        function onSuccess(data) {
+            //console.log('Tag list data succeeded', data);
+            var $result = $('#tag-list');
+            $.each(data.tags, function(i, tag) {
+                $result.append(
+                    '<li><a href="/tag/' + tag.slug + '/">' + tag.name + '</a></li>'
+                );
+            });
+        }
+
+        jQuery(document).ready(function () {
+            $.get(
+                ghost.url.api('tags', {
+                    limit: 'all',
+                    include: 'count.posts',
+                    order: 'count.posts DESC'
+                })
+            ).done(onSuccess);
+        });
+
+    </script>
+
     {{!-- Fitvids makes video embeds responsive and awesome --}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{!-- The main JavaScript file for Casper --}}

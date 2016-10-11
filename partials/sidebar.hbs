@@ -1,0 +1,92 @@
+
+
+                <div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title"></h3>
+                    </div>
+
+                    <div class="panel-body ">
+                        <ul class="nav nav-pills nav-stacked">
+                            {{#foreach navigation}}
+                                <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+                            {{/foreach}}
+                        </ul>
+                    </div>
+                </div>
+
+                <!--<div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Text widget</h3>
+                    </div>
+
+                    <div class="panel-body text-widget">
+                        <p>Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case.
+                        </p>
+
+                    </div>
+                </div>-->
+
+                <div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Subscribe</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        {{#if @labs.subscribers}}
+                            <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
+                        {{else}}
+                            <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <!--<div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Categories</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="blog.html">Webdesign</a>
+                            </li>
+                            <li class="active"><a href="blog.html">Tutorials</a>
+                            </li>
+                            <li><a href="blog.html">Print</a>
+                            </li>
+                            <li><a href="blog.html">Our tips</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+
+                <!--<div class="panel sidebar-menu">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Tags</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <ul class="tag-cloud">
+                            <li><a href="#"><i class="fa fa-tags"></i> html5</a> 
+                            </li>
+                            <li><a href="#"><i class="fa fa-tags"></i> css3</a> 
+                            </li>
+                            <li><a href="#"><i class="fa fa-tags"></i> jquery</a> 
+                            </li>
+                            <li><a href="#"><i class="fa fa-tags"></i> ajax</a> 
+                            </li>
+                            <li><a href="#"><i class="fa fa-tags"></i> php</a> 
+                            </li>
+                            <li><a href="#"><i class="fa fa-tags"></i> responsive</a> 
+                            </li>
+                            <li><a href="#"><i class="fa fa-tags"></i> visio</a> 
+                            </li>
+                            <li><a href="#"><i class="fa fa-tags"></i> bootstrap</a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+                

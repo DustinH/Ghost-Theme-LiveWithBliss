@@ -29,10 +29,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
-    <link rel="stylesheet" type="text/css" href="{{asset "css/site.css"}}">
-
     <link rel="stylesheet" type="text/css" href="{{asset "css/animate.css"}}">
-    <link rel="stylesheet" type="text/css" href="{{asset "css/style.livewithbliss.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.default.css"}}" id="theme-stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}">
 
     <!-- Responsivity for older IE -->
@@ -44,70 +42,42 @@
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} nav-closed">
 
     <div id="all">
 
         <header>
-            
-            {{> headertopbar}}
+            {{!-- The blog gray bar --}}
+            {{> topbar}}
 
-            {{> headernavbar}}
+            <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+                <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+                    <div class="container">
+                        {{> navigationheader}}
 
+                        <div class="navbar-collapse" id="navigation">
+
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li class="dropdown"><a href="#" class="dropdown-toggle">Hello <b class="caret2"></b></a></li>
+
+                                <li class="dropdown active"><a href="{{@blog.url}}" class="dropdown-toggle">Blog <b class="caret2"></b></a></li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-		<div id="heading-breadcrumbs">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h1>Blog listing: Medium</h1>
-					</div>
-					<div class="col-md-6">
-						<ul class="breadcrumb">
-							<li><a href="#">Home</a>
-							</li>
-							<li>Blog listing: Medium</li>
-						</ul>
+        <div class="site-wrapper">
 
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--<div id="contenttest">
-			<div class="container">
-				<div class="row">
-
-
-				</div>
-			</div>
-		</div>-->
-
-        <main class="blog-wrapper" role="main">
-            <!--<header class="blog-header">
-                <nav class="blog-nav">
-                    {{navigation}}
-                </nav>
-            </header>-->
-            <div class="page-wrapper">
-                {{{body}}}
-                <div class="clearfix"></div>
-            </div>
-        </main>
-        
-
-        <div id="get-it">
-			<div class="container">
-				<div class="col-md-8 col-sm-12">
-					<h3>Do you want a FREE market report?</h3>
-				</div>
-				<div class="col-md-4 col-sm-12">
-					<a href="#" class="btn btn-template-transparent-primary">Download Report</a>
-				</div>
-			</div>
-		</div>
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
 
         {{> footer}}
+
+        </div>
 
     </div>
 

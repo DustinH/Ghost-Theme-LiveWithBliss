@@ -1,10 +1,9 @@
 {
-    "name": "livewithbliss",
-    // "displayName": "Live With Bliss - 0.10.0",
+    "name": "ghost-theme-livewithbliss",
+    "displayName": "Live With Bliss",
     "description": "Live with Bliss theme from the default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "homepage": "https://github.com/DustinH/Ghost-Thme-LiveWithBliss",
-    // "demo": "",
-    "version": "1.0.1",
+    "homepage": "https://github.com/DustinH/Ghost-Theme-LiveWithBliss",
+    "version": "1.0.11",
     "engines": {
         "ghost": "^0.9.0"
     },
@@ -32,8 +31,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/DustinH/Ghost-Thme-LiveWithBliss.git"
+        "url": "git://github.com/DustinH/Ghost-Theme-LiveWithBliss.git"
     },
-    "bugs": "https://github.com/DustinH/Ghost-Thme-LiveWithBliss/issues",
-    "contributors": "https://github.com/DustinH/Ghost-Thme-LiveWithBliss/graphs/contributors"
+    "bugs": "https://github.com/DustinH/Ghost-Theme-LiveWithBliss/issues",
+    "contributors": [
+        "https://github.com/DustinH/Ghost-Tehme-LiveWithBliss/graphs/contributors"
+    ]
 }

@@ -7,8 +7,8 @@ if ($.cookie("theme_layout")) {
 
 $(function() {
 
-    //sliderHomepage();
-    //sliders();
+    sliderHomepage();
+    sliders();
     fullScreenContainer();
     //productDetailGallery(4000);
     menuSliding();

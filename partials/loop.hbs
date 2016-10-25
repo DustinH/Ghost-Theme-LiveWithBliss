@@ -21,14 +21,17 @@
 </article>-->
 <section class="post">
     <div class="row">
-        <!--<div class="col-md-4">
+        {{#if image}}
+        <div class="col-md-2">
             <div class="image">
-                <a href="blog-post.html">
-                    <img src="img/blog-medium.jpg" class="img-responsive" alt="Example blog post alt">
+                <a href="{{url}}">
+                    <img src="{{image}}" class="img-responsive" alt="{{title}}">
                 </a>
             </div>
-        </div>-->
-        <div class="col-md-8">
+        </div>
+        {{/if}}
+
+        <div {{#if image}} class="col-md-10" {{else}} class="col-md-12" {{/if}}>
             <h2><a href="{{url}}">{{title}}</a></h2>
             <div class="clearfix">
                 <p class="author-category">By <a href="{{author.url}}">{{author.name}}</a>

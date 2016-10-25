@@ -19,17 +19,18 @@
 						</div>
 						<!--/.navbar-header -->
 
+						{{^is "home"}}
                         <div class="navbar-collapse collapse" id="navigation2">
 
                             <ul class="nav navbar-nav navbar-right">
 
-                                <li class="dropdown"><a href="#" class="dropdown-toggle">Hello <b class="caret2"></b></a></li>
+                                <li class="dropdown"><a href="http://www.livewithbliss.com" class="dropdown-toggle" target="_blank">Hello <b class="caret2"></b></a></li>
 
                                 <li class="dropdown active"><a href="{{@blog.url}}" class="dropdown-toggle">Blog <b class="caret2"></b></a></li>
                             
                             </ul>
                         </div>
-
+						{{/is}}
 
 						<!--<div class="navbar-collapse collapse" id="navigation">
 

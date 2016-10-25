@@ -58,7 +58,16 @@ ul, ol {
 .bg-color-2 {
   background: #f9f8f6;
 }
-
+footer.post-meta {
+    display: block;
+    margin: 1.75rem 0 0 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: #9EABB3;
+	background: #D6EDFF;
+	color: #362f2d;
+}
 footer {
   padding-top: 50px;
   padding-bottom: 20px;

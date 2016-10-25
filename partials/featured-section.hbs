@@ -1,34 +1,35 @@
-{{#get "posts" filter="featured:true" limit="6" as |featured|}}
-<section class="featured-posts">
-    <div class="home-carousel">
-        <div class="dark-mask"></div>
+{{#is "home"}}
+    {{#get "posts" filter="featured:true" limit="6" as |featured|}}
+    <section class="featured-posts">
+        <div class="home-carousel">
+            <div class="dark-mask"></div>
 
-        <div class="container">
-            <div class="homepage owl-carousel">
-                {{#foreach featured}}
-
-                <div class="item">
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <img class="img-responsive" src="{{image}}" alt="{{title}}" />
-                        </div>
-                        <div class="col-sm-5">
-                            <h1><a href="{{url}}">{{title}}</a></h1>
-                            {{!--<ul class="list-style-none">
-                                <li>7 preprepared colour variations.</li>
-                                <li>Easily to change fonts</li>
-                            </ul>--}}
-                        <p class="intro">{{excerpt words="26"}}</p>
-                        <p class="read-more"><a href="{{url}}" class="btn btn-template-main">Read more...</a></p>
+            <div class="container">
+                <div class="homepage owl-carousel">
+                    {{#foreach featured}}
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <img class="img-responsive" src="{{image}}" alt="{{title}}" />
+                            </div>
+                            <div class="col-sm-5">
+                                <h1><a href="{{url}}">{{title}}</a></h1>
+                                {{!--<ul class="list-style-none">
+                                    <li>7 preprepared colour variations.</li>
+                                    <li>Easily to change fonts</li>
+                                </ul>--}}
+                                <p class="intro">{{excerpt words="26"}}</p>
+                                <p class="read-more"><a href="{{url}}" class="btn btn-template-main">Read more...</a></p>
+                            </div>
                         </div>
                     </div>
+                    {{/foreach}}
                 </div>
-                {{/foreach}}
             </div>
+
         </div>
+    </section>
+    {{else}}
 
-    </div>
-</section>
-{{else}}
-
-{{/get}}        
+    {{/get}}        
+{{/is}}

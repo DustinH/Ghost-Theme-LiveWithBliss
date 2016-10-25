@@ -311,7 +311,7 @@ section.bg-color-1 .btn-warning:hover {
 
 .callout .free-market-analysis .shadow-holder{
 	padding:0 0 10px;
-	background:url(/images/background-shadow-top.png) no-repeat 0 100%;
+	background:url(../img/background-shadow-top.png) no-repeat 0 100%;
 	margin:0 19px 0 -4px;
 }
 .callout .free-market-analysis .free-market-analysis-form{

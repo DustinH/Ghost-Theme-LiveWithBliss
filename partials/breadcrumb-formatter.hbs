@@ -1,0 +1,23 @@
+<div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="col-md-5">
+                <ul class="breadcrumb">
+                    <li><a href="{{ @blog.url }}">Home</a></li>
+
+                    {{#foreach tagspost}}
+                    {{!--{{#tag}}--}}
+                    <li>
+                        <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+                    </li>
+                    {{!--{{/tag}}--}}
+                    {{/foreach}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

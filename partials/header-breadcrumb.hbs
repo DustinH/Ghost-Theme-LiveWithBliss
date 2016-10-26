@@ -1,34 +1,4 @@
-{{^is "home"}}
-    {{#is "post"}}
-    {{#post}}
-
-    <div id="heading-breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1>{{title}}</h1>
-                </div>
-                <div class="col-md-6">
-                    <ul class="breadcrumb">
-                        <li><a href="{{ @blog.url }}">Home</a></li>
-
-                        {{#if tags}}
-                            {{#foreach tags }}
-                            <li>
-                                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
-                            </li>
-                            {{/foreach}}
-                        {{/if}}
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{/post}}
-    {{else}}
-
+{{^is "home,post"}}
     <div id="heading-breadcrumbs">
         <div class="container">
             <div class="row">
@@ -38,6 +8,4 @@
             </div>
         </div>
     </div>
-
-    {{/is}}
 {{/is}}

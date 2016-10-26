@@ -91,6 +91,36 @@
                 <div class="clearfix"></div>
             </div>
         </main>
+
+        {{#is "post"}}
+        {{#post}}
+        <div class="site-wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    {{!-- Links to Previous/Next posts --}}
+                    <aside class="read-next">
+                        {{#next_post}}
+                        <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+                            <section class="post">
+                                <h2>{{title}}</h2>
+                                <p>{{excerpt words="19"}}&hellip;</p>
+                            </section>
+                        </a>
+                        {{/next_post}}
+                        {{#prev_post}}
+                        <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+                            <section class="post">
+                                <h2>{{title}}</h2>
+                                <p>{{excerpt words="19"}}&hellip;</p>
+                            </section>
+                        </a>
+                        {{/prev_post}}
+                    </aside>
+                </div>
+            </div>
+        </div>
+        {{/post}}
+        {{/is}}
         
 
         <div id="get-it">

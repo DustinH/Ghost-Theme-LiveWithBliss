@@ -1,3 +1,4 @@
+{{^is "home"}}
 {{#foreach posts limit="1"}}
 <div class="row" id="blog-listing-big">
     <section class="post">
@@ -24,46 +25,19 @@
     </section>
 </div>
 {{/foreach}}
+{{/is}}
 
 <div class="row" id="blog-listing-medium">
     <section class="blog-content">
 
     {{#foreach posts}}
-    {{^if @first}}
-
-    <article class="{{post_class}}">
-        <div class="row">
-            {{#if image}}
-            <div class="col-md-4">
-                <div class="image">
-                    <a href="{{url}}">
-                        <img src="{{image}}" class="img-responsive" alt="{{title}}">
-                    </a>
-                </div>
-            </div>
-            {{/if}}
-
-            <div {{#if image}} class="col-md-8" {{else}} class="col-md-12" {{/if}}>
-                <h2><a href="{{url}}">{{title}}</a></h2>
-                <div class="clearfix">
-                    <p class="author-category">By <a href="{{author.url}}">{{author.name}}</a></p>
-                    <p class="date-comments">
-                        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}"><a href="{{url}}"><i class="fa fa-calendar-o"></i> {{date format="DD MMMM YYYY"}}</a></time>
-                        <!--<a href="blog-post.html"><i class="fa fa-comment-o"></i> 8 Comments</a>-->
-                    </p>
-                </div>
-                <p class="intro">{{excerpt words="26"}}</p>
-                <p class="read-more"><a href="{{url}}" class="btn btn-template-main">Continue reading</a></p>
-                <footer class="post-meta">
-                    {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
-                    {{author}}
-                    {{tags prefix="in "}}
-                </footer>
-            </div>
-        </div>
-    </article>
-
-    {{/if}}
+    {{#is "home"}}
+        {{> post-formatter}}
+    {{else}}
+        {{^if @first}}
+            {{> post-formatter}}
+        {{/if}}
+    {{/is}}
     {{/foreach}}
     </section>
 </div>

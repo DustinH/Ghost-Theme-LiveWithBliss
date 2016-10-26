@@ -15,11 +15,11 @@
     white-space: normal;
 }
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
-}
+}*/
 
 
 
@@ -190,7 +190,7 @@ section.bg-color-1 .btn-warning {
     border-color: #f26522;
 }
 
- .btn {
+ /*.btn {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
@@ -209,7 +209,7 @@ section.bg-color-1 .btn-warning {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-}
+}*/
 
 section.bg-color-1 .btn-warning:hover {
     color: #ffffff;

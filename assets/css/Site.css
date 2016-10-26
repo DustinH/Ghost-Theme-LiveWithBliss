@@ -68,7 +68,7 @@ footer.post-meta {
 	background: #D6EDFF;
 	color: #362f2d;
 }
-footer {
+#footer {
   padding-top: 50px;
   padding-bottom: 20px;
   font-weight: 300;
@@ -77,27 +77,27 @@ footer {
   line-height: 30px;
   color: #988884;
 }
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer h5,
-footer h6,
-footer .h1,
-footer .h2,
-footer .h3,
-footer .h4,
-footer .h5,
-footer .h6 {
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6,
+#footer .h1,
+#footer .h2,
+#footer .h3,
+#footer .h4,
+#footer .h5,
+#footer .h6 {
   color: #ffffff;
 }
-footer a:hover {
+#footer a:hover {
   color: #ffffff;
 }
-footer .list li.active {
+#footer .list li.active {
   color: #ffffff;
 }
-footer .rights {
+#footer .rights {
   font-size: 13px;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
@@ -106,7 +106,7 @@ footer .rights {
   letter-spacing: 1.3px;
 }
 
-footer a {
+#footer a {
     font: inherit;
     color: inherit;
     text-decoration: none;
@@ -114,6 +114,23 @@ footer a {
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
+}
+.post-footer {
+    position: relative;
+    margin: 6rem 0 0 0;
+    padding: 3rem 0 0 0;
+    border-top: #EBF2F6 1px solid;
+}
+
+.post-footer h4 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.post-footer p {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.75em;
 }
 
 .big {
